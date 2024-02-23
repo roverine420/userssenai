@@ -1,0 +1,61 @@
+html,body{
+    height: 100%;
+}
+
+.form-container{
+    max-width: 300px;
+    padding: 1rem;
+}
+
+.form-container-pesquisa {
+    max-width: 500px;
+    padding: 1rem;
+    margin: 0 auto; /* Adicionando esta linha para centralizar o formulário */
+}
+.center-logo-senai{
+    margin-left: 10%;
+}
+.center-title-login{
+    margin-top: 5%;
+    margin-left: 35%;
+}
+.link-cadastro-center{
+    margin-left: 19%;
+}
+
+.center-title-registro{
+    margin-top: 5%;
+    margin-left: 30%;
+}
+
+.center-group-btn-register{
+
+    margin-left: 10%;
+}
+.center-title-esqueciSenha{
+    font-size: 160%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+.center-img-esqueciSenha{
+    margin-left: 12%;
+    
+}
+.center-pesquisa {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.center-logo-senai-pesquisa{
+    margin-left: 25%;
+}
+.table-container {
+    max-width: 500px;
+    margin-left: 35.7%
+    
+}
+.btn-center-sair{
+	max-width: 500px;
+    margin-left: 37.8%
+   
+}

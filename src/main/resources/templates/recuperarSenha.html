@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Recuperar senha</title>
+    </head>
+    <body class="d-flex align-items-center py-4 bg-body-tertiary">
+        <main class="w-100 m-auto form-container">
+            <form method="get" action="#">
+                <img src="img/logo-senai.png" class="center-logo-senai center-img-esqueciSenha">
+                <h1 class="h3 mb-3 fw-normal center-title-esqueciSenha">Recuperar senha</h1>
+                
+                <div class="form-floating">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="informe seu email">
+                    <label for="email">Email</label></br>
+                </div>
+                <div class="btn-group btn-group-lg center-group-btn-register" role="group" aria-label="...">
+                    <a href="login" class="btn btn-outline-danger">Voltar</a>
+                    <button type="submit" class="btn btn-outline-primary" onclick="exibirAlerta()">Confirmar</button>
+                </div></br></br>
+                <div id="alerta" class="alert alert-warning" role="alert" style="display: none;">
+                    Ao confirmar um e-mail sera criada uma nova senha temporaria</br></br>
+                    a senha temporaria deve ser "senha123"
+                </div>
+            </form>
+        </main>
+        <script>
+            function exibirAlerta() {
+             var alerta = document.getElementById("alerta");
+             alerta.style.display = "block";
+            }
+        </script>
+
+    </body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Editar Usuário</title>
+</head>
+
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <main class="w-100 m-auto form-container">
+        <form id="editUserForm" method="post" th:action="@{'/editarusuario/' + ${user.id}}" th:object="${user}" autocomplete="off">
+
+            <input type="hidden" th:field="*{id}">
+            <img src="/img/logo-senai.png" class="center-logo-senai">
+            <h1 class="h3 mb-3 fw-normal center-title-registro">Editar Usuário</h1>
+        
+            <div class="form-floating">
+                <input type="text" id="nome" name="firstname" class="form-control" placeholder="Seu nome" th:field="*{firstname}">
+                <label for="nome">Nome</label>
+            </div><br>
+        
+            <div class="form-floating">
+                <input type="text" id="sobreNome" name="lastname" class="form-control" placeholder="Sobrenome" th:field="*{lastname}">
+                <label for="sobreNome">Sobrenome</label>
+            </div><br> 
+
+            <div class="form-floating">
+                <input type="text" id="telefone" name="numberphone" class="form-control" placeholder="(xx) x xxxxx-xxx" th:field="*{numberphone}">
+                <label for="telefone">Telefone</label>
+            </div><br>
+
+            <div class="form-floating">
+                <input type="email" id="email" name="email" class="form-control" placeholder="seu-email@gemail.com" th:value="${user.email}" readonly>
+                <label for="email">Email</label>
+            </div><br>   
+
+            <div class="form-floating">
+                <input type="password" id="senha" name="password" class="form-control" placeholder="********" th:field="*{password}">
+                <label for="senha">Senha</label>
+            </div><br>
+
+            <div class="form-check text-start my-3">
+                <input type="hidden" name="agreedToTerms" value="false">
+                <input type="checkbox" id="termos" name="agreedToTerms" class="form-check-input" th:field="*{agreedToTerms}">
+                <label for="termos" class="form-check-label">Aceite os termos</label>
+            </div><br>
+
+            <div class="btn-group btn-group-lg center-group-btn-register" role="group" aria-label="...">
+                <a href="/listuser" class="btn btn-outline-danger">Cancelar</a>
+                <button type="button" class="btn btn-outline-primary" onclick="confirmAlter()">Salvar</button>
+            </div><br>
+        </form>
+    </main>
+    <script>
+        function confirmAlter() {
+            var confirmation = confirm('Tem certeza que deseja alterar este usuário?');
+            if (confirmation) {
+                document.getElementById('editUserForm').submit();
+            }
+        }
+    </script>
+</body>
+</html>
